@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required><br>
+        <input type="email" id="email" placeholder="Your Email" required><br>
+        <textarea id="message" placeholder="Your Message" required></textarea><br>
+        <button type="submit">Send</button>
+        <p id="successMessage" style="display: none; color: green;">Your message has been sent successfully!</p>
+    </form>
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("successMessage").style.display = "block";
+            this.reset();
+        });
+    </script>
+</body>
+</html>
